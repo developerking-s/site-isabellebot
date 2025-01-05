@@ -3,17 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isabelle Site</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Site com Menu Flutuante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos do Menu Flutuante */
+        .floating-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffcccb; /* Rosa claro */
+            z-index: 1000;
+        }
+
+        .floating-menu ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .floating-menu ul li {
+            margin: 0 20px;
+        }
+
+        .floating-menu ul li a {
+            color: #d85f75; /* Rosa escuro */
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .floating-menu ul li a:hover {
+            color: #ff80ab; /* Rosa médio */
+        }
+
+        /* Botões Iniciais */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8bbd0; /* Rosa pastel */
+        }
+
+        .btn {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            background-color: #d85f75; /* Rosa escuro */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ff80ab; /* Rosa médio */
+        }
+
+        /* Estilos do Header com Foto */
+        .header {
+            position: relative;
+            background-image: url('sua-imagem.jpg'); /* Coloque o caminho da imagem */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel com transparência */
+        }
+
+        .header-content {
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            color: #ff80ab; /* Rosa médio */
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fadeIn 2s 1s forwards;
+            color: #ffcccb; /* Rosa claro */
+        }
+
+        /* Animação de Fade In */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo da Seção Principal */
+        section {
+            padding: 40px;
+            text-align: center;
+            background-color: #f8bbd0; /* Rosa pastel */
+            color: #d85f75; /* Rosa escuro */
+        }
+
+        section p {
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Botões Iniciais -->
+    <div class="buttons-container">
+        <button class="btn add-bot">
+            <i class="fas fa-plus-circle"></i> Adicionar Bot
+        </button>
+        <button class="btn support">
+            <i class="fas fa-headset"></i> Suporte
+        </button>
+    </div>
 
     <!-- Menu Flutuante -->
     <nav class="floating-menu">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="#">Funções</a></li>
+            <li><a href="#">Serviços</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
     </nav>
@@ -21,14 +151,14 @@
     <!-- Área com Foto e Texto -->
     <header class="header">
         <div class="header-content">
-            <h1 class="animated-text">Site da Isabelle Bot!</h1>
-            <p>Nada por enquanto .</p>
+            <h1 class="animated-text">Bem-vindo ao Meu Site!</h1>
+            <p>Explore nossos serviços e conheça mais sobre nós.</p>
         </div>
     </header>
 
     <!-- Seção Principal -->
     <section>
-        <p>Nada por enquanto.</p>
+        <p>Conteúdo adicional do site.</p>
     </section>
 
 </body>
