@@ -19,8 +19,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #ffcccb; /* Rosa claro */
+            background-color: #6a1b9a; /* Roxo */
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .floating-menu ul {
@@ -35,13 +36,15 @@
         }
 
         .floating-menu ul li a {
-            color: #d85f75; /* Rosa escuro */
+            color: #ffffff; /* Branco */
             text-decoration: none;
             font-size: 18px;
+            font-weight: 600;
         }
 
         .floating-menu ul li a:hover {
             color: #ff80ab; /* Rosa médio */
+            text-decoration: underline;
         }
 
         /* Botões Iniciais */
@@ -49,14 +52,14 @@
             display: flex;
             justify-content: center;
             padding: 20px;
-            background-color: #f8bbd0; /* Rosa pastel */
+            background-color: #8e24aa; /* Roxo escuro */
         }
 
         .btn {
             margin: 0 10px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 16px;
             cursor: pointer;
             color: white;
@@ -64,6 +67,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            transition: background-color 0.3s ease;
         }
 
         .btn:hover {
@@ -80,12 +84,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel com transparência */
+            background-color: rgba(106, 27, 154, 0.7); /* Roxo com transparência */
         }
 
         .header-content {
             text-align: center;
             color: white;
+            font-family: 'Arial', sans-serif;
         }
 
         .header h1 {
@@ -100,7 +105,7 @@
             font-size: 1.2rem;
             opacity: 0;
             animation: fadeIn 2s 1s forwards;
-            color: #ffcccb; /* Rosa claro */
+            color: #ffffff; /* Branco */
         }
 
         /* Animação de Fade In */
@@ -118,12 +123,13 @@
             padding: 40px;
             text-align: center;
             background-color: #f8bbd0; /* Rosa pastel */
-            color: #d85f75; /* Rosa escuro */
+            color: #6a1b9a; /* Roxo */
         }
 
         section p {
             font-size: 1.5rem;
         }
+
     </style>
 </head>
 <body>
@@ -149,7 +155,7 @@
     </nav>
 
     <!-- Área com Foto e Texto -->
-    <header class="https://cdn.discordapp.com/attachments/1324873106745069681/1324876050089644113/ae67ededcf625732b5f437723db05b71.png?ex=677b0ff9&is=6779be79&hm=f596eb14f71632e3431cfbcdcb8e65514e1a218f8a69b6027d8551655537ec46&">
+    <header class="header">
         <div class="header-content">
             <h1 class="animated-text">Site da Isabelle Bot!</h1>
             <p>Explore nossos serviços e conheça mais sobre nós.</p>
