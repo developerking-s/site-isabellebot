@@ -91,11 +91,23 @@
         .header h1 {
             font-size: 2.5rem;
             color: #6a1b9a;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .header p {
             font-size: 1.2rem;
             color: #333;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Animacao de Fade */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         .profile-image {
@@ -104,6 +116,46 @@
             background-color: #6a1b9a;
             border-radius: 50%;
             margin: 0 auto;
+            animation: scaleUp 1.5s ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Botões com ícones */
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button-container .btn {
+            padding: 12px 20px;
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-container .btn:hover {
+            background-color: #ff80ab;
+        }
+
+        .btn i {
+            font-size: 18px;
         }
 
         /* Embed de Vídeo */
@@ -135,11 +187,20 @@
     <header class="header">
         <div class="profile-image"></div>
         <div class="header-content">
-</div>
             <h1>Site da Isabelle Bot!</h1>
             <p>Explore o nosso bot e veja os comandos abaixo</p>
         </div>
+        <!-- Botões de Ação -->
+        <div class="button-container">
+            <button class="btn">
+                <i class="fas fa-plus"></i> Adicionar o Bot
+            </button>
+            <button class="btn">
+                <i class="fas fa-headset"></i> Suporte
+            </button>
+        </div>
     </header>
+
     <script>
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu-items');
