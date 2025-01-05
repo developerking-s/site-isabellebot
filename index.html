@@ -80,6 +80,40 @@
                 display: block;
             }
         }
+
+        /* Estilos para a página principal */
+        .header {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f3f3f3;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #6a1b9a;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            background-color: #6a1b9a;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        /* Embed de Vídeo */
+        .video-embed {
+            margin-top: 30px;
+            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
@@ -102,9 +136,15 @@
         <div class="profile-image"></div>
         <div class="header-content">
             <h1>Site da Isabelle Bot!</h1>
-            <p>Explore o nosso bot e veja os comandos</p>
+            <p>Explore o nosso bot e veja os comandos abaixo</p>
         </div>
     </header>
+
+    <!-- Embed de Vídeo -->
+    <section class="video-section">
+        <h2>Veja o vídeo do Isabelle Bot!</h2>
+        <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </section>
 
     <script>
         const toggle = document.querySelector('.menu-toggle');
