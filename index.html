@@ -51,12 +51,12 @@
         .buttons-container {
             display: flex;
             justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
             padding: 20px;
-            background-color: #8e24aa; /* Roxo escuro */
         }
 
         .btn {
-            margin: 0 10px;
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
@@ -74,48 +74,34 @@
             background-color: #ff80ab; /* Rosa médio */
         }
 
-        /* Estilos do Header com Foto */
+        /* Estilo do Header com Imagem em Círculo */
         .header {
             position: relative;
-            background-image: url('https://cdn.discordapp.com/attachments/1324873106745069681/1324876050089644113/ae67ededcf625732b5f437723db05b71.png?ex=677b0ff9&is=6779be79&hm=f596eb14f71632e3431cfbcdcb8e65514e1a218f8a69b6027d8551655537ec46&'); /* Coloque o caminho da imagem */
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f8bbd0; /* Rosa pastel */
+        }
+
+        .header .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #6a1b9a; /* Roxo */
             background-size: cover;
             background-position: center;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(106, 27, 154, 0.7); /* Roxo com transparência */
+            margin: 0 auto 20px;
+            background-image: url('https://cdn.discordapp.com/attachments/1324873106745069681/1324876050089644113/ae67ededcf625732b5f437723db05b71.png');
         }
 
-        .header-content {
-            text-align: center;
-            color: white;
-            font-family: 'Arial', sans-serif;
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #6a1b9a; /* Roxo */
         }
 
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            color: #ff80ab; /* Rosa médio */
-        }
-
-        .header p {
+        .header-content p {
             font-size: 1.2rem;
-            opacity: 0;
-            animation: fadeIn 2s 1s forwards;
-            color: #ffffff; /* Branco */
-        }
-
-        /* Animação de Fade In */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            color: #6a1b9a; /* Roxo */
         }
 
         /* Estilo da Seção Principal */
@@ -129,20 +115,9 @@
         section p {
             font-size: 1.5rem;
         }
-
     </style>
 </head>
 <body>
-
-    <!-- Botões Iniciais -->
-    <div class="buttons-container">
-        <button class="btn add-bot">
-            <i class="fas fa-plus-circle"></i> Adicionar Bot
-        </button>
-        <button class="btn support">
-            <i class="fas fa-headset"></i> Suporte
-        </button>
-    </div>
 
     <!-- Menu Flutuante -->
     <nav class="floating-menu">
@@ -154,13 +129,24 @@
         </ul>
     </nav>
 
-    <!-- Área com Foto e Texto -->
+    <!-- Header com Foto e Texto -->
     <header class="header">
+        <div class="profile-image"></div>
         <div class="header-content">
-            <h1 class="animated-text">Site da Isabelle Bot!</h1>
-            <p>Explore a nossa bot veja os comandos</p>
+            <h1>Site da Isabelle Bot!</h1>
+            <p>Explore o nosso bot e veja os comandos</p>
         </div>
     </header>
+
+    <!-- Botões Iniciais -->
+    <div class="buttons-container">
+        <button class="btn add-bot">
+            <i class="fas fa-plus-circle"></i> Adicionar Bot
+        </button>
+        <button class="btn support">
+            <i class="fas fa-headset"></i> Suporte
+        </button>
+    </div>
 
     <!-- Seção Principal -->
     <section>
