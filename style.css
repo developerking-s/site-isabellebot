@@ -1,0 +1,92 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Menu Flutuante */
+.floating-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffcccb; /* Rosa claro */
+    z-index: 1000;
+}
+
+.floating-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.floating-menu ul li {
+    margin: 0 20px;
+}
+
+.floating-menu ul li a {
+    color: #d85f75; /* Rosa escuro */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.floating-menu ul li a:hover {
+    color: #ff80ab; /* Rosa médio */
+}
+
+/* Estilos do Header com Foto */
+.header {
+    position: relative;
+    background-image: url('sua-imagem.jpg'); /* Coloque o caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel com transparência */
+}
+
+.header-content {
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    color: #ff80ab; /* Rosa médio */
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+    color: #ffcccb; /* Rosa claro */
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo da Seção Principal */
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: #f8bbd0; /* Rosa pastel */
+    color: #d85f75; /* Rosa escuro */
+}
+
+section p {
+    font-size: 1.5rem;
+}
