@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-       <meta property="og:title" content="Site da Isabelle">
-    <meta property="og:description" content="Veja mais sobre o bot isabelle um bot muito bem feito com muito carinho.">
+    <meta property="og:title" content="Site da Isabelle">
+    <meta property="og:description" content="Veja mais sobre o bot Isabelle, um bot muito bem feito com muito carinho.">
     <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png">
-    <meta name="theme-color" content="#6a1b9a"
-<meta charset="UTF-8">
+    <meta name="theme-color" content="#6a1b9a">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabelle Bot</title>
     <link rel="icon" href="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Resetando margens e padding */
         * {
@@ -18,13 +18,13 @@
             box-sizing: border-box;
         }
 
-        /* Estilos do Menu Flutuante */
+        /* Menu Flutuante */
         .floating-menu {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #6a1b9a; /* Roxo */
+            background-color: #6a1b9a;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
@@ -47,14 +47,14 @@
         }
 
         .floating-menu .menu-items li a {
-            color: #ffffff; /* Branco */
+            color: #ffffff;
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
         }
 
         .floating-menu .menu-items li a:hover {
-            color: #ff80ab; /* Rosa médio */
+            color: #ff80ab;
             text-decoration: underline;
         }
 
@@ -86,7 +86,7 @@
             }
         }
 
-        /* Estilos para a página principal */
+        /* Estilo do cabeçalho */
         .header {
             padding: 50px 20px;
             text-align: center;
@@ -105,7 +105,6 @@
             animation: fadeIn 3s ease-in-out;
         }
 
-        /* Animacao de Fade */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -140,7 +139,7 @@
             }
         }
 
-        /* Botões com ícones */
+        /* Botões */
         .button-container {
             margin-top: 30px;
             display: flex;
@@ -170,18 +169,28 @@
             font-size: 18px;
         }
 
-        /* Embed de Vídeo */
-        .video-embed {
-            margin-top: 30px;
-            max-width: 100%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        /* Seção vazia com animação */
+        .animated-section {
+            height: 300px;
+            background: linear-gradient(270deg, #6a1b9a, #ff80ab, #6a1b9a);
+            background-size: 600% 600%;
+            animation: gradient 6s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
     </style>
 </head>
 <body>
-
     <!-- Menu Flutuante -->
     <nav class="floating-menu">
         <a href="#" class="logo">Isabelle Bot</a>
@@ -198,22 +207,24 @@
 
     <header class="header">
         <div class="profile-image">
-            <img src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png" alt="Foto do Bot"> <!-- Substitua pela URL da sua foto -->
+            <img src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png" alt="Foto do Bot">
         </div>
         <div class="header-content">
             <h1>Site da Isabelle Bot!</h1>
             <p>Explore o nosso bot e veja os comandos abaixo</p>
         </div>
-        <!-- Botões de Ação -->
         <div class="button-container">
-            <button class="btn">
+            <a href="https://discordapp.com/oauth2/authorize?client_id=1287242887041519659&scope=bot&permissions=2146958847" class="btn">
                 <i class="fas fa-plus"></i> Adicionar o Bot
-            </button>
-            <button class="btn">
+            </a>
+            <a href="https://discord.gg/FJFUQNhzdd" class="btn">
                 <i class="fas fa-headset"></i> Suporte
-            </button>
+            </a>
         </div>
     </header>
+
+    <!-- Seção vazia com animação -->
+    <section class="animated-section"></section>
 
     <script>
         const toggle = document.querySelector('.menu-toggle');
@@ -223,6 +234,5 @@
             menu.classList.toggle('active');
         });
     </script>
-
 </body>
 </html>
