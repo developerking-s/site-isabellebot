@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Site da Isabelle">
     <meta property="og:description" content="Veja mais sobre o bot Isabelle, um bot muito bem feito com muito carinho.">
     <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png">
     <meta name="theme-color" content="#6a1b9a">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabelle Bot</title>
     <link rel="icon" href="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Resetando margens e padding */
+        /* Reset de margens e padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
         /* Menu Flutuante */
@@ -175,6 +180,12 @@
             background: linear-gradient(270deg, #6a1b9a, #ff80ab, #6a1b9a);
             background-size: 600% 600%;
             animation: gradient 6s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
         }
 
         @keyframes gradient {
@@ -188,6 +199,12 @@
                 background-position: 0% 50%;
             }
         }
+
+        @media (max-width: 768px) {
+            .animated-section {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -198,7 +215,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="comandos.html">Comandos</a></li>
-            <li><a href="https://discord.gg/FJFUQNhzdd">Contato</a></li>
+            <li><a href="https://dsc.gg/isabellebot">Contato</a></li>
         </ul>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -224,7 +241,9 @@
     </header>
 
     <!-- Seção vazia com animação -->
-    <section class="animated-section"></section>
+    <section class="animated-section">
+        Descubra mais sobre o bot aqui!
+    </section>
 
     <script>
         const toggle = document.querySelector('.menu-toggle');
