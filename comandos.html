@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-      <meta property="og:title" content="Comandos da Isabelle">
-    <meta property="og:description" content="Veja mais sobre o bot isabelle um bot muito bem feito com muito carinho.">
-    <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png">
-    <meta name="theme-color" content="#6a1b9a" 
- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Comandos da Isabelle">
+    <meta property="og:description" content="Veja mais sobre o bot Isabelle, um bot muito bem feito com muito carinho.">
+    <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png">
+    <meta name="theme-color" content="#6a1b9a">
     <title>Isabelle - Comandos</title>
     <style>
+        /* Reset de margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #2c003e; /* Roxo escuro */
+            background-color: #f5f5f5; /* Fundo claro */
+            color: #333; /* Texto escuro */
             margin: 0;
             padding: 20px;
-            color: white;
         }
+
         h1 {
             text-align: center;
-            color: #e8a9f0; /* Rosa claro */
+            color: #6a1b9a; /* Roxo */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
+
         h2 {
             color: #bb86fc; /* Roxo claro */
             margin-top: 40px;
-            border-bottom: 2px solid #e8a9f0;
+            border-bottom: 2px solid #e8a9f0; /* Rosa claro */
             padding-bottom: 5px;
+            font-size: 1.8rem;
+            animation: slideIn 1s ease-in-out;
         }
+
         .categoria {
             margin-bottom: 30px;
         }
+
         .embed {
-            background-color: #e8a9f0; /* Rosa claro */
-            color: #2c003e; /* Roxo escuro */
-            border: 1px solid #bb86fc;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff; /* Fundo branco */
+            color: #333; /* Texto escuro */
+            border: 2px solid #bb86fc; /* Roxo claro */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 15px;
             margin: 10px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .embed:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .embed strong {
-            color: #2c003e; /* Roxo escuro */
+            color: #6a1b9a; /* Roxo */
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .embed {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Lista de Comandos</h1>
-        <div class="menu-toggle">
+
     <!-- Comandos de Moderação -->
     <div class="categoria">
         <h2>Comandos de Moderação</h2>
@@ -53,10 +112,19 @@
             <strong>I?lock</strong> - Bloqueie um canal.
         </div>
         <div class="embed">
-            <strong>I?unlock</strong> - Desbloque um canal.
+            <strong>I?unlock</strong> - Desbloqueie um canal.
         </div>
         <div class="embed">
             <strong>I?clear</strong> - Limpe as mensagens de um canal.
+        </div>
+        <div class="embed">
+            <strong>I?ban</strong> - Bane um usuário do servidor.
+        </div>
+        <div class="embed">
+            <strong>I?kick</strong> - Expulsa um usuário do servidor.
+        </div>
+        <div class="embed">
+            <strong>I?mute</strong> - Silencia um usuário.
         </div>
     </div>
 
@@ -84,6 +152,9 @@
         <div class="embed">
             <strong>I?userinfo</strong> - Veja as suas informações.
         </div>
+        <div class="embed">
+            <strong>I?serverinfo</strong> - Veja as informações do servidor.
+        </div>
     </div>
 
     <!-- Comandos de Diversão -->
@@ -94,6 +165,15 @@
         </div>
         <div class="embed">
             <strong>I?ship</strong> - Shipe duas pessoas.
+        </div>
+        <div class="embed">
+            <strong>I?meme</strong> - Veja um meme aleatório.
+        </div>
+        <div class="embed">
+            <strong>I?gif</strong> - Pesquise um gif.
+        </div>
+        <div class="embed">
+            <strong>I?coinflip</strong> - Jogue cara ou coroa.
         </div>
     </div>
 
@@ -111,6 +191,9 @@
         </div>
         <div class="embed">
             <strong>I?sobremim</strong> - Troque o sobremim do seu perfil social.
+        </div>
+        <div class="embed">
+            <strong>I?background</strong> - Altere o fundo do seu perfil.
         </div>
     </div>
 
