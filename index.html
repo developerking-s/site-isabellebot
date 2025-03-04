@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Site da Isabelle">
-    <meta property="og:description" content="Veja mais sobre o bot Isabelle, um bot muito bem feito com muito carinho.">
+    <meta property="og:title" content="Isabelle Bot">
+    <meta property="og:description" content="Conheça o Isabelle Bot, um bot cheio de funcionalidades e feito com carinho!">
     <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png">
     <meta name="theme-color" content="#6a1b9a">
     <title>Isabelle Bot</title>
@@ -21,6 +21,20 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Fundo sólido roxo/rosa */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6a1b9a, #ff80ab);
+            z-index: -1;
         }
 
         /* Menu Flutuante */
@@ -29,7 +43,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #6a1b9a;
+            background-color: rgba(106, 27, 154, 0.8);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
@@ -56,11 +70,11 @@
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         .floating-menu .menu-items li a:hover {
             color: #ff80ab;
-            text-decoration: underline;
         }
 
         .menu-toggle {
@@ -78,7 +92,7 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: #6a1b9a;
+                background-color: rgba(106, 27, 154, 0.8);
                 padding: 10px 0;
             }
 
@@ -93,20 +107,21 @@
 
         /* Estilo do cabeçalho */
         .header {
-            padding: 50px 20px;
+            padding: 100px 20px;
             text-align: center;
-            background-color: #f3f3f3;
+            position: relative;
+            z-index: 1;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            color: #6a1b9a;
+            font-size: 3rem;
+            color: #fff;
             animation: fadeIn 2s ease-in-out;
         }
 
         .header p {
             font-size: 1.2rem;
-            color: #333;
+            color: #fff;
             animation: fadeIn 3s ease-in-out;
         }
 
@@ -119,32 +134,37 @@
             }
         }
 
+        /* Foto da bot com borda animada */
         .profile-image {
-            width: 120px;
-            height: 120px;
-            background-color: #6a1b9a;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            position: relative;
             border-radius: 50%;
-            margin: 0 auto;
-            animation: scaleUp 1.5s ease-in-out;
             overflow: hidden;
+            animation: borderPulse 3s infinite;
         }
 
         .profile-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
         }
 
-        @keyframes scaleUp {
+        @keyframes borderPulse {
             0% {
-                transform: scale(0);
+                box-shadow: 0 0 0 0 rgba(255, 128, 171, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(255, 128, 171, 0);
             }
             100% {
-                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 128, 171, 0);
             }
         }
 
-        /* Botões */
+        /* Botões com estilo de embeds */
         .button-container {
             margin-top: 30px;
             display: flex;
@@ -154,56 +174,123 @@
 
         .button-container .btn {
             padding: 12px 20px;
-            background-color: #6a1b9a;
+            background-color: rgba(106, 27, 154, 0.2);
             color: white;
-            border: none;
-            border-radius: 5px;
+            border: 2px solid #ff80ab;
+            border-radius: 10px;
             font-size: 16px;
             display: flex;
             align-items: center;
             gap: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
         }
 
         .button-container .btn:hover {
-            background-color: #ff80ab;
+            background-color: rgba(255, 128, 171, 0.2);
+            border-color: #6a1b9a;
+            transform: translateY(-3px);
+        }
+
+        .button-container .btn:active {
+            transform: scale(0.95);
         }
 
         .btn i {
             font-size: 18px;
         }
 
-        /* Seção vazia com animação */
-        .animated-section {
-            height: 300px;
-            background: linear-gradient(270deg, #6a1b9a, #ff80ab, #6a1b9a);
-            background-size: 600% 600%;
-            animation: gradient 6s ease infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
+        /* Seções */
+        .section {
+            padding: 60px 20px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff80ab;
         }
 
-        @media (max-width: 768px) {
-            .animated-section {
-                font-size: 1rem;
-            }
+        .section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ddd;
+        }
+
+        /* Embeds para Funcionalidades */
+        .embed {
+            background-color: rgba(106, 27, 154, 0.2);
+            border: 2px solid #ff80ab;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .embed:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(255, 128, 171, 0.3);
+        }
+
+        .embed h3 {
+            font-size: 1.5rem;
+            color: #ff80ab;
+            margin-bottom: 10px;
+        }
+
+        .embed p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .embed i {
+            font-size: 1.5rem;
+            color: #ff80ab;
+            margin-right: 10px;
+        }
+
+        /* Formulário de Contato */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(106, 27, 154, 0.2);
+            border: 2px solid #ff80ab;
+            border-radius: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .contact-form button {
+            padding: 12px 20px;
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #6a1b9a;
         }
     </style>
 </head>
@@ -213,22 +300,23 @@
         <a href="#" class="logo">Isabelle Bot</a>
         <ul class="menu-items">
             <li><a href="#home">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="comandos.html">Comandos</a></li>
-            <li><a href="https://dsc.gg/isabellebot">Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 
+    <!-- Cabeçalho -->
     <header class="header">
         <div class="profile-image">
             <img src="https://cloud-f8yf41iud-hack-club-bot.vercel.app/1ae67ededcf625732b5f437723db05b71.png" alt="Foto do Bot">
         </div>
         <div class="header-content">
-            <h1>Site da Isabelle Bot!</h1>
-            <p>Explore o nosso bot e veja os comandos abaixo</p>
+            <h1>Isabelle Bot</h1>
+            <p>Um bot cheio de funcionalidades e feito com carinho!</p>
         </div>
         <div class="button-container">
             <a href="https://discordapp.com/oauth2/authorize?client_id=1287242887041519659&scope=bot&permissions=2146958847" class="btn">
@@ -240,12 +328,51 @@
         </div>
     </header>
 
-    <!-- Seção vazia com animação -->
-    <section class="animated-section">
-        Descubra mais sobre o bot aqui!
+    <!-- Seção Sobre -->
+    <section id="sobre" class="section">
+        <h2>Sobre o Bot</h2>
+        <p>
+            O Isabelle Bot é um bot multifuncional desenvolvido para trazer diversão, utilidade e facilidade para o seu servidor no Discord. 
+            Com uma variedade de comandos e funcionalidades, ele é perfeito para moderar, entreter e engajar sua comunidade.
+        </p>
+    </section>
+
+    <!-- Seção Funcionalidades -->
+    <section id="funcionalidades" class="section">
+        <h2>Funcionalidades</h2>
+        <div class="embed">
+            <h3><i class="fas fa-shield-alt"></i> Moderação</h3>
+            <p>Ferramentas avançadas de moderação para manter seu servidor seguro e organizado.</p>
+        </div>
+        <div class="embed">
+            <h3><i class="fas fa-gamepad"></i> Entretenimento</h3>
+            <p>Comandos divertidos como memes, jogos e muito mais para entreter sua comunidade.</p>
+        </div>
+        <div class="embed">
+            <h3><i class="fas fa-tools"></i> Utilidades</h3>
+            <p>Ferramentas úteis como lembretes, pesquisas e gerenciamento de servidor.</p>
+        </div>
+        <div class="embed">
+            <h3><i class="fas fa-code"></i> Integração</h3>
+            <p>Integração com APIs externas para informações em tempo real e automação.</p>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
 
     <script>
+        // Menu toggle
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu-items');
 
